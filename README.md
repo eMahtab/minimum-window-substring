@@ -89,6 +89,41 @@ class Solution {
     }
 }
 ```
+### Code execution output :
+```java
+Matched : x at index 13
+Matched : y at index 15
+Map : {a=-2, b=-1, c=-1, d=-1, e=-1, f=-1, g=-1, h=-1, i=-1, j=-1, k=-1, l=-1, x=-1, y=0}
+Left : 0
+Map : {a=-1, b=-1, c=-1, d=-1, e=-1, f=-1, g=-1, h=-1, i=-1, j=-1, k=-1, l=-1, x=-1, y=0}
+Left : 1
+Map : {a=-1, b=0, c=-1, d=-1, e=-1, f=-1, g=-1, h=-1, i=-1, j=-1, k=-1, l=-1, x=-1, y=0}
+Left : 2
+Map : {a=-1, b=0, c=0, d=-1, e=-1, f=-1, g=-1, h=-1, i=-1, j=-1, k=-1, l=-1, x=-1, y=0}
+Left : 3
+Map : {a=-1, b=0, c=0, d=0, e=-1, f=-1, g=-1, h=-1, i=-1, j=-1, k=-1, l=-1, x=-1, y=0}
+Left : 4
+Map : {a=-1, b=0, c=0, d=0, e=0, f=-1, g=-1, h=-1, i=-1, j=-1, k=-1, l=-1, x=-1, y=0}
+Left : 5
+Map : {a=-1, b=0, c=0, d=0, e=0, f=0, g=-1, h=-1, i=-1, j=-1, k=-1, l=-1, x=-1, y=0}
+Left : 6
+Map : {a=-1, b=0, c=0, d=0, e=0, f=0, g=0, h=-1, i=-1, j=-1, k=-1, l=-1, x=-1, y=0}
+Left : 7
+Map : {a=-1, b=0, c=0, d=0, e=0, f=0, g=0, h=0, i=-1, j=-1, k=-1, l=-1, x=-1, y=0}
+Left : 8
+Map : {a=-1, b=0, c=0, d=0, e=0, f=0, g=0, h=0, i=0, j=-1, k=-1, l=-1, x=-1, y=0}
+Left : 9
+Map : {a=-1, b=0, c=0, d=0, e=0, f=0, g=0, h=0, i=0, j=0, k=-1, l=-1, x=-1, y=0}
+Left : 10
+Map : {a=-1, b=0, c=0, d=0, e=0, f=0, g=0, h=0, i=0, j=0, k=0, l=-1, x=-1, y=0}
+Left : 11
+Map : {a=-1, b=0, c=0, d=0, e=0, f=0, g=0, h=0, i=0, j=0, k=0, l=0, x=-1, y=0}
+Left : 12
+Map : {a=0, b=0, c=0, d=0, e=0, f=0, g=0, h=0, i=0, j=0, k=0, l=0, x=-1, y=0}
+Left : 13
+Map : {a=0, b=0, c=0, d=0, e=0, f=0, g=0, h=0, i=0, j=0, k=0, l=0, x=0, y=0}
+Left : 14
+```
 
 # References :
 https://leetcode.com/articles/minimum-window-substring/?page=5
