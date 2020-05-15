@@ -89,7 +89,7 @@ class Solution {
     }
 }
 ```
-### Code execution output :
+### Code execution output : String S = "abcdefghijklaxxy", T = "xy"
 ```java
 Matched : x at index 13
 Matched : y at index 15
@@ -126,4 +126,5 @@ Left : 14
 ```
 
 # References :
-https://leetcode.com/articles/minimum-window-substring/?page=5
+1. https://leetcode.com/articles/minimum-window-substring/?page=5
+2. https://baihuqian.github.io/2018-08-15-minimum-window-substring
