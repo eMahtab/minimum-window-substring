@@ -56,45 +56,45 @@ class Solution {
 ## Implementation 2 :
 ```java
 class Solution {
-	
-	public String minWindow(String s, String t) {
-		Map<Character, Integer> charsToMatch = new HashMap<>();
-		for(char ch : t.toCharArray()) {
-			int occurrence = charsToMatch.getOrDefault(ch, 0);
-			charsToMatch.put(ch,  occurrence + 1);
-		}
-		Map<Character,Integer> charsInWindow = new HashMap<>();
-		int left = 0, right = 0, charsMatchedInWindow = 0;
-		int uniqueCharsToMatch = charsToMatch.size();
-		String minSubstring = "";
-		int minWindowLength = Integer.MAX_VALUE;
+
+       public String minWindow(String s, String t) {
+         Map<Character, Integer> charsToMatch = new HashMap<>();
+         for(char ch : t.toCharArray()) {
+            int occurrence = charsToMatch.getOrDefault(ch, 0);
+            charsToMatch.put(ch,  occurrence + 1);
+         }
+         Map<Character,Integer> charsInWindow = new HashMap<>();
+         int left = 0, right = 0, charsMatchedInWindow = 0;
+         int uniqueCharsToMatch = charsToMatch.size();
+         String minSubstring = "";
+         int minWindowLength = Integer.MAX_VALUE;
 		
-		while(right < s.length()) {
-			char ch = s.charAt(right);
-			int freq = charsInWindow.getOrDefault(ch, 0);
-			charsInWindow.put(ch, freq+1);
-			if(charsToMatch.containsKey(ch) && charsToMatch.get(ch).equals(charsInWindow.get(ch))) {
-				  charsMatchedInWindow++;
-			}
+         while(right < s.length()) {
+           char ch = s.charAt(right);
+           int freq = charsInWindow.getOrDefault(ch, 0);
+           charsInWindow.put(ch, freq+1);
+           if(charsToMatch.containsKey(ch) && charsToMatch.get(ch).equals(charsInWindow.get(ch))) {
+               charsMatchedInWindow++;
+           }
 			
-			while(charsMatchedInWindow == uniqueCharsToMatch && left <= right) {
+           while(charsMatchedInWindow == uniqueCharsToMatch && left <= right) {
                 int windowSize = right - left + 1;
                 if(windowSize < minWindowLength) {
-					minWindowLength = windowSize;
-					minSubstring = s.substring(left, right+1);
-				}
-				char charAtLeft = s.charAt(left);
-				charsInWindow.put(charAtLeft, charsInWindow.get(charAtLeft) - 1);
-				if(charsToMatch.containsKey(charAtLeft)) {
-					if(charsInWindow.get(charAtLeft).intValue() < charsToMatch.get(charAtLeft).intValue())
-						charsMatchedInWindow--;
-				}
-			   left++;	
-			}
-			right++;
-		}
-		return minSubstring;
-	}
+                    minWindowLength = windowSize;
+                    minSubstring = s.substring(left, right+1);
+                }
+                char charAtLeft = s.charAt(left);
+                charsInWindow.put(charAtLeft, charsInWindow.get(charAtLeft) - 1);
+                if(charsToMatch.containsKey(charAtLeft)) {
+                     if(charsInWindow.get(charAtLeft).intValue() < charsToMatch.get(charAtLeft).intValue())
+                       charsMatchedInWindow--;
+                }
+                left++;	
+            }
+          right++;
+        }
+         return minSubstring;
+    }
 }
 
 ```
