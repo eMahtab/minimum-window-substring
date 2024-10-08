@@ -53,7 +53,7 @@ class Solution {
 }
 ```
 
-## Implementation 2 :
+## Implementation 2 : https://www.youtube.com/watch?v=eS6PZLjoaq8&t=627s
 ```java
 class Solution {
 
